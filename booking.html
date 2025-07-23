@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Trip - GoVista Travel</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GoVista</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="booking.html">Book Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 40vh; position: relative; display: flex; align-items: center;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative text-center text-white">
+      <h1 class="display-4 fw-bold">Book Your Journey</h1>
+      <p class="lead">Just a few steps away from your dream vacation</p>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="text-center mb-4">Reservation Form</h2>
+              <p class="text-center mb-4 text-muted">Fill out the form below to book your trip. Our team will contact you within 24 hours to confirm your reservation.</p>
+              
+              <form>
+                <div class="row fade-in">
+                  <!-- Personal Information -->
+                  <div class="col-12 mb-4">
+                    <h4>Personal Information</h4>
+                  </div>
+
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" required>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                  </div>
+                  
+                  <!-- Trip Details -->
+                  <div class="col-12 mt-4 mb-4">
+                    <h4>Trip Details</h4>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="destination" class="form-label">Destination</label>
+                    <select class="form-select" id="destination" required>
+                      <option value="" selected disabled>Select your destination</option>
+                      <option value="santorini">Santorini, Greece</option>
+                      <option value="paris">Paris, France</option>
+                      <option value="kyoto">Kyoto, Japan</option>
+                      <option value="bali">Bali, Indonesia</option>
+                      <option value="newyork">New York City, USA</option>
+                      <option value="capetown">Cape Town, South Africa</option>
+                      <option value="sydney">Sydney, Australia</option>
+                      <option value="venice">Venice, Italy</option>
+                      <option value="cairo">Cairo, Egypt</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="package" class="form-label">Package Type</label>
+                    <select class="form-select" id="package" required>
+                      <option value="" selected disabled>Select package type</option>
+                      <option value="standard">Standard Package</option>
+                      <option value="premium">Premium Package</option>
+                      <option value="luxury">Luxury Experience</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="departureDate" class="form-label">Departure Date</label>
+                    <input type="date" class="form-control" id="departureDate" required>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="returnDate" class="form-label">Return Date</label>
+                    <input type="date" class="form-control" id="returnDate" required>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="adults" class="form-label">Number of Adults</label>
+                    <select class="form-select" id="adults" required>
+                      <option value="" selected disabled>Select number</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6+</option>
+                    </select>
+                  </div>
+                  
+                  <div class="col-md-6 mb-3">
+                    <label for="children" class="form-label">Number of Children</label>
+                    <select class="form-select" id="children">
+                      <option value="0" selected>0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+                  
+                  <!-- Special Requests -->
+                  <div class="col-12 mt-4 mb-4">
+                    <h4>Special Requests</h4>
+                  </div>
+                  
+                  <div class="col-12 mb-3">
+                    <label for="specialRequests" class="form-label">Any special requests or requirements?</label>
+                    <textarea class="form-control" id="specialRequests" rows="4" placeholder="Enter any special requests, dietary requirements, accessibility needs, etc."></textarea>
+                  </div>
+                  
+                  <!-- Terms and Conditions -->
+                  <div class="col-12 mb-4 mt-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                      <label class="form-check-label" for="termsCheck">
+                        I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                      </label>
+                    </div>
+                  </div>
+                  
+                  <!-- Submit Button -->
+                  <div class="col-12">
+                    <div class="d-grid">
+                      <button type="submit" class="btn btn-primary btn-lg">Submit Booking Request</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips -->
+  <section class="section" style="background-color: var(--light);">
+    <div class="container">
+      <h2 class="section-title">Travel Tips</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4 slide-in-left">
+          <div class="card border-0 h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <i class="bi bi-passport" style="font-size: 2.5rem;"></i>
+              </div>
+              <h4>Travel Documents</h4>
+              <p>Ensure your passport is valid for at least 6 months beyond your travel dates. Check visa requirements for your destination and keep copies of all important documents.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 slide-in-left delay-1">
+          <div class="card border-0 h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <i class="bi bi-currency-exchange" style="font-size: 2.5rem;"></i>
+              </div>
+              <h4>Currency Exchange</h4>
+              <p>Exchange some currency before your trip and notify your bank of your travel plans to avoid card blocks. Consider a travel card for better exchange rates.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4 slide-in-left delay-2">
+          <div class="card border-0 h-100">
+            <div class="card-body">
+              <div class="text-primary mb-3">
+                <i class="bi bi-shield-check" style="font-size: 2.5rem;"></i>
+              </div>
+              <h4>Travel Insurance</h4>
+              <p>Consider purchasing travel insurance to protect against cancellations, medical emergencies, and lost luggage. Read the policy carefully before purchasing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h3 class="footer-title">GoVista</h3>
+          <p>Your premier destination for hassle-free travel ticket booking. Explore the world with confidence and ease.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> 123 Travel Street, Cityville</li>
+            <li><i class="bi bi-telephone"></i> +1 (555) 123-4567</li>
+            <li><i class="bi bi-envelope"></i> info@govista.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2025 GoVista. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle with Popper (without JavaScript functionality) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</body>
+</html>

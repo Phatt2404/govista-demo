@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - GoVista Travel</title>
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Gallery-specific styles */
+    .gallery-container {
+      padding: 0.5rem;
+    }
+    
+    .gallery-item {
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .gallery-item:hover {
+      box-shadow: var(--hover-shadow);
+      transform: translateY(-5px);
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: all 0.5s ease-in-out;
+    }
+    
+    .gallery-item:hover .gallery-img {
+      transform: scale(1.1);
+    }
+    
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 1rem;
+      transform: translateY(100%);
+      transition: all 0.3s ease-in-out;
+    }
+    
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">GoVista</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="destinations.html">Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="booking.html">Book Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="pricing.html">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <section style="background-image: url('https://images.unsplash.com/photo-1526470608268-f674ce90ebd4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80'); background-size: cover; background-position: center; height: 40vh; position: relative; display: flex; align-items: center;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5);"></div>
+    <div class="container position-relative text-center text-white">
+      <h1 class="display-4 fw-bold">Travel Photo Gallery</h1>
+      <p class="lead">Explore stunning destinations through our lens</p>
+    </div>
+  </section>
+
+  <!-- Gallery Filter -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-8 mx-auto text-center">
+          <p class="lead">Browse our collection of travel photographs capturing breathtaking landscapes, vibrant cultures, and unforgettable moments from destinations around the world.</p>
+          <div class="btn-group mt-4" role="group" aria-label="Gallery filter">
+            <button type="button" class="btn btn-outline-primary active">All</button>
+            <button type="button" class="btn btn-outline-primary">Europe</button>
+            <button type="button" class="btn btn-outline-primary">Asia</button>
+            <button type="button" class="btn btn-outline-primary">Americas</button>
+            <button type="button" class="btn btn-outline-primary">Africa & Middle East</button>
+            <button type="button" class="btn btn-outline-primary">Oceania</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Gallery Grid -->
+      <div class="row gallery-container">
+        <!-- Gallery Item 1 -->
+        <div class="col-md-6 col-lg-4 fade-in">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1696519669474-3001c0e2b548?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="gallery-img" alt="Santorini, Greece">
+            <div class="gallery-caption">
+              <h5 class="m-0">Santorini, Greece</h5>
+              <p class="m-0 small">The iconic blue domes and white buildings overlooking the Aegean Sea</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 2 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-1">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Machu Picchu, Peru">
+            <div class="gallery-caption">
+              <h5 class="m-0">Machu Picchu, Peru</h5>
+              <p class="m-0 small">Ancient Incan citadel set high in the Andes Mountains</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 3 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-2">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Venice, Italy">
+            <div class="gallery-caption">
+              <h5 class="m-0">Venice, Italy</h5>
+              <p class="m-0 small">The magical floating city with its iconic canals and gondolas</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 4 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-3">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1578469645742-46cae010e5d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="gallery-img" alt="Kyoto, Japan">
+            <div class="gallery-caption">
+              <h5 class="m-0">Kyoto, Japan</h5>
+              <p class="m-0 small">Traditional temples and bamboo forests in Japan's cultural capital</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 5 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-4">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1516496636080-14fb876e029d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Cape Town, South Africa">
+            <div class="gallery-caption">
+              <h5 class="m-0">Cape Town, South Africa</h5>
+              <p class="m-0 small">Stunning coastal views with Table Mountain as the backdrop</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 6 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-1">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1580834341580-8c17a3a630ca?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="gallery-img" alt="Petra, Jordan">
+            <div class="gallery-caption">
+              <h5 class="m-0">Petra, Jordan</h5>
+              <p class="m-0 small">The ancient rock-cut city known as the 'Rose City'</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 7 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-2">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="New York City, USA">
+            <div class="gallery-caption">
+              <h5 class="m-0">New York City, USA</h5>
+              <p class="m-0 small">The iconic skyline of the Big Apple</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 8 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-3">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" alt="Dubrovnik, Croatia">
+            <div class="gallery-caption">
+              <h5 class="m-0">Dubrovnik, Croatia</h5>
+              <p class="m-0 small">The 'Pearl of the Adriatic' with its iconic medieval walls</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 9 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-4">
+          <div class="gallery-item">
+            <img src="https://plus.unsplash.com/premium_photo-1697730221799-f2aa87ab2c5d?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="gallery-img" alt="Sydney, Australia">
+            <div class="gallery-caption">
+              <h5 class="m-0">Sydney, Australia</h5>
+              <p class="m-0 small">The beautiful harbor with Opera House and Harbour Bridge</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 10 -->
+        <div class="col-md-6 col-lg-8 fade-in">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=80" class="gallery-img" style="height: 400px;" alt="Northern Lights, Iceland">
+            <div class="gallery-caption">
+              <h5 class="m-0">Northern Lights, Iceland</h5>
+              <p class="m-0 small">The mesmerizing aurora borealis lighting up the Nordic sky</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 11 -->
+        <div class="col-md-6 col-lg-4 fade-in delay-1">
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1565967511849-76a60a516170?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" class="gallery-img" style="height: 400px;" alt="Bali, Indonesia">
+            <div class="gallery-caption">
+              <h5 class="m-0">Bali, Indonesia</h5>
+              <p class="m-0 small">Rice terraces and temples in this tropical paradise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Your Photos -->
+  <section class="section" style="background-color: var(--light);">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0 slide-in-left">
+          <h2>Share Your Travel Photos</h2>
+          <p>Have you traveled with GoVista? We'd love to see your adventure photos! Share your favorite travel moments with us and they might be featured in our gallery.</p>
+          <p>Tag your photos with <strong>#GoVistaTravel</strong> on social media or email them to <a href="mailto:photos@govista.com">photos@govista.com</a> with your name and travel destination.</p>
+          <div class="social-links mt-4">
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-6 slide-in-right">
+          <div class="card border-0">
+            <div class="card-body p-4">
+              <h4 class="mb-3">Upload Photo</h4>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                  <label for="destination" class="form-label">Destination</label>
+                  <input type="text" class="form-control" id="destination" placeholder="Where was this photo taken?">
+                </div>
+                <div class="mb-3">
+                  <label for="photoUpload" class="form-label">Select Photo</label>
+                  <input type="file" class="form-control" id="photoUpload">
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">Submit Photo</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h3 class="footer-title">GoVista</h3>
+          <p>Your premier destination for hassle-free travel ticket booking. Explore the world with confidence and ease.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <h5 class="footer-title">Resources</h5>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="blog.html">Travel Blog</a></li>
+            <li><a href="#">Sitemap</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title">Contact Us</h5>
+          <ul class="footer-links">
+            <li><i class="bi bi-geo-alt"></i> 123 Travel Street, Cityville</li>
+            <li><i class="bi bi-telephone"></i> +1 (555) 123-4567</li>
+            <li><i class="bi bi-envelope"></i> info@govista.com</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2025 GoVista. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle with Popper (without JavaScript functionality) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</body>
+</html>
